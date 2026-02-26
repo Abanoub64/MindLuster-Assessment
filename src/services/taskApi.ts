@@ -1,9 +1,9 @@
 import axios from "axios";
 import type { CreateTask, Task } from "../types/task";
 
-const API_URL = "http://localhost:3000/tasks";
+const API_URL = "http://localhost:4000/tasks";
 
-// todo: maybe add try catch later if we have time
+// todo: maybe add try catch later if i have time
 const getTasks = async (): Promise<Task[]> => {
   const res = await axios.get(API_URL);
   return res.data;

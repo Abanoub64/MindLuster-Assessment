@@ -1,5 +1,7 @@
 # Kanban board - Frontend Assesment :)
 
+> **Note**: AI was used exclusively to assist in generating this `README.md`.
+
 This is a React-based Kanban style ToDo lisst matching the requirements. Uses React, Zustand (for state), React Query, Material UI, and `@dnd-kit` (drag and drop).
 
 ## Features
@@ -11,7 +13,7 @@ This is a React-based Kanban style ToDo lisst matching the requirements. Uses Re
 ✅ **Search**: Search bar filters by both `title` and `description`.
 ✅ **UI**: Built with Material UI (MUI).
 ✅ **Data Fetch/Cache**: React Query hooks.
-✅ **Mock API**: `json-server` running on port 3000.
+✅ **Mock API**: `json-server` running on port 4000.
 
 ---
 
@@ -27,15 +29,39 @@ npm install
 
 ### 2. Start the Mock API Server
 
-The application uses `json-server` as a mock backend. As per the requirements, it should run on port `4000`.
+You can use one of the following methods to mock your API:
 
-Open a terminal and run:
+**Option 1 – Local Mock API with json-server:**
+
+1. Install `json-server` globally:
 
 ```bash
-npx json-server --watch db.json --port 4000
+npm install -g json-server
 ```
 
-_(The API will be accessible at `http://localhost:4000/tasks`)_
+2. Create `db.json` (if it does not exist) with the following content:
+
+```json
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Design homepage",
+      "description": "Include hero section",
+      "column": "backlog",
+      "priority": "LOW"
+    }
+  ]
+}
+```
+
+3. Run the server:
+
+```bash
+json-server --watch db.json --port 4000
+```
+
+4. Access via: `http://localhost:4000/tasks`
 
 ### 3. Start the React Frontend
 
