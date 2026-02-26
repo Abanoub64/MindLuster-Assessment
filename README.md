@@ -2,6 +2,13 @@
 
 > **Note**: AI was used exclusively to assist in generating this `README.md`.
 
+**Live Demo:** [https://mind-luster-assessment-one.vercel.app/](https://mind-luster-assessment-one.vercel.app/)
+
+> 🚨 **IMPORTANT WARNING FOR LIVE DEMO:**
+> The live demo uses a free-tier mocked `json-server` deployed on Render. **Because it is hosted on a free plan, you will experience noticeable delays (lag) when updating tasks or dragging and dropping them between columns.**
+>
+> For the best, smoothest experience, it is **highly recommended** to run the mock server locally following the Setup Instructions below!
+
 This is a React-based Kanban style ToDo lisst matching the requirements. Uses React, Zustand (for state), React Query, Material UI, and `@dnd-kit` (drag and drop).
 
 ## Features
@@ -31,7 +38,11 @@ npm install
 
 You can use one of the following methods to mock your API:
 
-**Option 1 – Local Mock API with json-server:**
+**Option 1 – Use the deployed Mock API (Default)**
+For the demo, a `json-server` is deployed on Render. If you just want to run the React app immediately, make sure the API URL is pointing to the Render backend, and you won't need to run a local server!
+
+**Option 2 – Local Mock API with json-server:**
+If you want to use a local mock server instead, follow these steps:
 
 1. Install `json-server` globally:
 
