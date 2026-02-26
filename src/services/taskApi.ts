@@ -1,8 +1,9 @@
 import axios from "axios";
 import type { CreateTask, Task } from "../types/task";
 
-const API_URL = "http://localhost:4000/tasks";
+const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
 
+const API_URL = `${BASE_URL}/tasks`;
 // todo: maybe add try catch later if i have time
 const getTasks = async (): Promise<Task[]> => {
   const res = await axios.get(API_URL);

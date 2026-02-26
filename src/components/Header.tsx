@@ -6,7 +6,7 @@ import { useTaskQuery } from "../hooks/useTaskQuery";
 export default function Header() {
   const { searchTerm, setSearchTerm } = useUIStore();
   const { data: tasks = [] } = useTaskQuery();
-  const tasksNo: number = tasks.length + 1;
+  const tasksNo: number = tasks.length;
 
   return (
     <AppBar
